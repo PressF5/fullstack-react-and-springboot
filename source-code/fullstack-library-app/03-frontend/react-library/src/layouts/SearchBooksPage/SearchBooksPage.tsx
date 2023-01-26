@@ -26,6 +26,7 @@ export const SearchBooksPage = () => {
             if (searchUrl === '') {
                 url = `${baseUrl}?page=${currentPage - 1}&size=${booksPerPage}`;
             } else {
+                setSearchUrl(`/search/findByTitleContaining?title=${search}&page=${currentPage - 1}&size=${booksPerPage}`);
                 url = baseUrl + searchUrl;
             }
 
